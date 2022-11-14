@@ -47,7 +47,7 @@ func main() {
 	viper.SetDefault("web.host", "127.0.0.1")
 	viper.SetDefault("web.port", 2112)
 	viper.SetDefault("metrics.path", "/metrics")
-	viper.SetEnvPrefix("AWS_ECR_SCANNER")
+	viper.SetEnvPrefix("AWS_ECR_SCAN")
 	viper.SetEnvKeyReplacer(strings.NewReplacer(".", "_"))
 	viper.AutomaticEnv()
 
