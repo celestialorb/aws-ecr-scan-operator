@@ -43,7 +43,7 @@ func main() {
 	viper.SetDefault("log.format", "logfmt")
 	viper.SetDefault("log.level", "info")
 	viper.SetDefault("cron.schedule", "0 35 */3 * * *")
-	viper.SetDefault("images.tag", "any")
+	viper.SetDefault("images.filter.tag.status", "any")
 	viper.SetDefault("web.host", "127.0.0.1")
 	viper.SetDefault("web.port", 2112)
 	viper.SetDefault("metrics.path", "/metrics")
@@ -161,7 +161,7 @@ func ReconcileRepository(ctx context.Context, repository types.Repository) {
 
 	// Determine the image filter to use.
 	status := types.TagStatusAny
-	switch viper.GetString("images.tag") {
+	switch viper.GetString("images.filter.tag.status") {
 	case "tagged":
 		status = types.TagStatusTagged
 	case "untagged":
