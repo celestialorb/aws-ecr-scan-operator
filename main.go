@@ -42,7 +42,7 @@ func main() {
 	// Establish our configuration default values.
 	viper.SetDefault("log.format", "logfmt")
 	viper.SetDefault("log.level", "info")
-	viper.SetDefault("cron.schedule", "0 35 */3 * * *")
+	viper.SetDefault("cron.schedule", "0 0 0 * * *")
 	viper.SetDefault("images.filter.tag.status", "any")
 	viper.SetDefault("web.host", "127.0.0.1")
 	viper.SetDefault("web.port", 2112)
