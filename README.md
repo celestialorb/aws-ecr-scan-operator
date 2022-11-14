@@ -30,3 +30,12 @@ Since this operator interacts with the AWS ECR API it will need to run under a r
 | `ecr:DescribeRepositories` |
 | `ecr:ListImages` |
 | `ecr:StartImageScan` |
+
+## Metrics
+This operator comes with a webserver to export some simple Prometheus metrics to track its operation in addition to the standard Golang Prometheus metrics. The table below describes the metrics exported.
+
+| Name | Type | Description |
+| --- | --- | --- |
+| `aws_ecr_scans_requested` | Counter | The total count of AWS ECR image scan requests sent. |
+| `aws_ecr_scans_requested_errors` | Counter | The total count of AWS ECR image scan requests that results in an error. |
+| `aws_ecr_scans_rate_limited` | Counter | The total count of AWS ECR image scan requests rejected due to rate-limiting. |
