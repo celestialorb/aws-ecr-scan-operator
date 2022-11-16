@@ -19,8 +19,8 @@ Below is a table of all current configuration elements.
 | `images.filter.tag.status` | `AWS_ECR_SCAN_IMAGES_FILTER_TAG_STATUS` | `any` | `any`,`tagged`,`untagged` | Filter images to trigger scans on by tag status. |
 | `log.format` | `AWS_ECR_SCAN_LOG_FORMAT` | `logfmt` | `json`,`logfmt`,`text` | The format of the logging output. |
 | `log.level` | `AWS_ECR_SCAN_LOG_LEVEL` | `info` | `debug`,`info`,`warn`,`error`,`fatal` | The log level for the logging output. |
-| `web.host` | `AWS_ECR_SCAN_WEB_HOST` | `127.0.0.1` | N/A | The host to bind to for the webserver. |
-| `web.port` | `AWS_ECR_SCAN_WEB_PORT` | `2112` | N/A | The port to bind to for the webserver. |
+| `web.host` | `AWS_ECR_SCAN_WEB_HOST` | `0.0.0.0` | N/A | The host to bind to for the webserver. |
+| `web.port` | `AWS_ECR_SCAN_WEB_PORT` | `9090` | N/A | The port to bind to for the webserver. |
 
 ## Permissions
 Since this operator interacts with the AWS ECR API it will need to run under a role with the proper AWS IAM permissions in order to perform the necessary operations. Below is a list of all permissions this operators needs to be permitted to do.
